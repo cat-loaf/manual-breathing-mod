@@ -1,0 +1,10 @@
+IronLung: {
+	DisplayName: Iron Lung
+	Tooltip:
+		'''
+		Breathe easy - let me breathe for you!
+
+		Makes you a bit slower
+
+		'''
+}

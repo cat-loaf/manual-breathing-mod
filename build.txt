@@ -1,0 +1,3 @@
+displayName = Manual Breathing
+author = kcatloaf
+version = 0.1
