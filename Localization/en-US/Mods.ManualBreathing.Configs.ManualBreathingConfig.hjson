@@ -1,0 +1,11 @@
+DisplayName: Manual Breathing Config
+
+breathTickRate: {
+	Label: Breath Tick Rate
+	Tooltip: Control how fast the breath meter depletes. Higher values mean slower depletion.
+}
+
+enableInstaDeath: {
+	Label: Enable Insta Death
+	Tooltip: Enable instant death when breath runs out.
+}

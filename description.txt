@@ -1,4 +1,6 @@
 This mod allows you to manually breathe!
 Why? I don't know...
 
+Now has config options!
+
 P.S. look into "Iron Lungs"...

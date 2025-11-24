@@ -5,6 +5,7 @@ using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using ManualBreathing.Config;
 
 namespace ManualBreathing.Content.Players;
 
@@ -19,6 +20,9 @@ public class ManualBreathingPlayer : ModPlayer
     public bool autoBreathe = false;
     public override void ResetEffects()
     {
+        var config = ModContent.GetInstance<ManualBreathingConfig>();
+        breathTickRate = config.breathTickRate;
+
         breathTimer++;
         if (breathTimer <= breathTickRate) return;
 
@@ -37,6 +41,18 @@ public class ManualBreathingPlayer : ModPlayer
                 "Mods.ManualBreathing.DeathMessage.ForgotToBreathe",
                 Player.name
             );
+
+            if (config.enableInstaDeath)
+            {
+                Player.KillMe(
+                    PlayerDeathReason.ByCustomReason(deathText),
+                    9999,
+                    0,
+                    false
+                );
+                return;
+            }
+
             Player.Hurt(
                 PlayerDeathReason.ByCustomReason(deathText),
                 Damage: 10,

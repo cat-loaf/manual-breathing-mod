@@ -2,5 +2,6 @@
 This mod enables manual breathing for a challenge in your terraria playthroughs.
 Why? I don't know...
 
+Now has config options!
 
 [i]P.S. look into "Iron Lungs"...[/i]
